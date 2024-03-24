@@ -1,7 +1,7 @@
 export interface CouponProps {
-  title: string
-  description: string
-  discount: number
+  title: string;
+  description: string;
+  discount: number;
 }
 
 const Coupon = ({ title, description, discount }: CouponProps) => {
@@ -12,7 +12,7 @@ const Coupon = ({ title, description, discount }: CouponProps) => {
         <span class="text-green-500 font-bold">{discount}%</span> {description}
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default Coupon
+export default Coupon;

@@ -37,6 +37,12 @@ Disallow: /
 - [x] Segmente a página /culturas por data e hora:
 - [x] Caso o usuário acesse a página no dia 1 de abril, adicione, no final da página, um banner de cupom de 5% nos produtos com patrocínio do deco.day
 - [x] Estilize o texto de temperatura de modo que seja um botão redondo flutuante.
+- [x] Adicione um apontamento para a página inicial no logo da loja
+- [x] HorizontalProductCard - Esta é uma section nova, deve ser criada do zero
+- [x] Ela descreve um product card (uma representação visual do produto) mas no formato horizontal.
+- [x] Espaço para uma imagem
+- [x] Título e descrição do produto
+- [x] Preço e botão de adicionar ao carrinho
 
 # Thanks to all contributors !
 
