@@ -14,6 +14,7 @@ import Image from "apps/website/components/Image.tsx";
 import NavItem from "./NavItem.tsx";
 import { navbarHeight } from "./constants.ts";
 import { Buttons, Logo } from "../../components/header/Header.tsx";
+import LikesTotalHeaderIsland from "$islands/LikesTotalHeaderIsland.tsx";
 
 // Make it sure to render it on the server only. DO NOT render it on an island
 function Navbar(
@@ -53,6 +54,7 @@ function Navbar(
         )}
 
         <div class="flex justify-end gap-1">
+          <LikesTotalHeaderIsland />
           <SearchButton />
           {platform === "vtex" && <CartButtonVTEX />}
           {platform === "vnda" && <CartButtonVDNA />}
@@ -130,6 +132,9 @@ function Navbar(
             WISHLIST
           </a>
         )}
+
+        <LikesTotalHeaderIsland />
+
         {!buttons?.hideCartButton && (
           <div class="flex items-center text-xs font-thin">
             {platform === "vtex" && <CartButtonVTEX />}
