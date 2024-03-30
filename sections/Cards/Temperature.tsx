@@ -22,7 +22,7 @@ export const loader = async (props: TemperatureSectionProps, req: Request) => {
 const TemperatureSection = ({ temperature }: SectionProps<typeof loader>) => {
   return (
     <button className="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white rounded-full p-2">
-      {temperature?.celsius}º
+      Temperatura: {temperature?.celsius}º
     </button>
   );
 };

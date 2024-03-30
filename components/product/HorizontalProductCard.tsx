@@ -34,7 +34,13 @@ export const HorizontalProductCard = ({
   return (
     <div class="flex items-center">
       {imageURL && (
-        <Image src={imageURL} width={175} height={115} loading="lazy" alt={name} />
+        <Image
+          src={imageURL}
+          width={175}
+          height={115}
+          loading="lazy"
+          alt={name}
+        />
       )}
       <div class="ml-2 flex flex-col">
         <h2>{name}</h2>

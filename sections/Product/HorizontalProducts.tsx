@@ -14,7 +14,7 @@ const HorizontalProductSection = ({
   const slimProducts = toSlimProducts(products);
 
   return (
-    <div class="flex items-center justify-center gap-x-4 flex-wrap">
+    <div class="flex items-center justify-center gap-x-4 flex-wrap p-2">
       {slimProducts.map((product) => (
         <HorizontalProductCard slimProduct={product} />
       ))}

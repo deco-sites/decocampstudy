@@ -53,7 +53,7 @@ export default function HeroFlats({
             />
           )}
           <div
-            class={`mx-6 lg:mx-auto lg:w-full space-y-4 gap-4 ${
+            class={`px-2 lg:mx-auto lg:w-full space-y-4 gap-4 ${
               image
                 ? "lg:w-1/2 lg:max-w-xl"
                 : "flex flex-col items-center justify-center lg:max-w-3xl"

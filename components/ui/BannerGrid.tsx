@@ -125,7 +125,7 @@ export default function BannnerGrid(props: Props) {
   } = { ...DEFAULT_PROPS, ...props };
 
   return (
-    <section class="container w-full px-4 md:px-0 mx-auto">
+    <section class="container w-full px-4 md:px-0 mx-auto py-2">
       {title &&
         (
           <div class="py-6 md:py-0 md:pb-[40px] flex items-center mt-6">
@@ -162,7 +162,7 @@ export default function BannnerGrid(props: Props) {
                 height={250}
               />
               <img
-                class="w-full"
+                class="w-full h-full"
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={srcMobile}
                 alt={alt}
