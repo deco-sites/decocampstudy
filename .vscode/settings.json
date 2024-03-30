@@ -15,5 +15,8 @@
   },
   "cSpell.words": [
     "celsius"
-  ]
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  }
 }
