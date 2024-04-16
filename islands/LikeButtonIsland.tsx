@@ -2,7 +2,10 @@ import { useSignal } from "@preact/signals";
 import Icon from "deco-sites/decocampstudy/components/ui/Icon.tsx";
 import { invoke } from "deco-sites/decocampstudy/runtime.ts";
 import { total } from "deco-sites/decocampstudy/sdk/useTotalLikes.ts";
-import { useEffect } from "preact/hooks";
+import { useEffect, useId } from "preact/hooks";
+import { SendEventOnClick } from "deco-sites/decocampstudy/components/Analytics.tsx";
+import { Bounce, toast, ToastContainer } from "react-toastify";
+
 
 export interface LikeButtonIslandProps {
   productID: string;
@@ -11,7 +14,9 @@ export interface LikeButtonIslandProps {
 function LikeButtonIsland({ productID }: LikeButtonIslandProps) {
   const selected = useSignal(false);
   const quantity = useSignal(0);
-
+  const id = useId();
+  const Toast = ToastContainer as any;
+  
   useEffect(() => {
     const updateTotals = async () => {
       const totalLikes = await invoke["deco-sites/decocampstudy"].loaders
@@ -40,13 +45,38 @@ function LikeButtonIsland({ productID }: LikeButtonIslandProps) {
     const totalLikesProduct = await invoke["deco-sites/decocampstudy"].loaders
       .totalLikesProductLoader({ productID });
     quantity.value = totalLikesProduct.product;
+    toast.success("👍 Curtiu meeeeeu!", {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
 
   return (
     <button
+      id={id}
       class="absolute left-0 top-2"
       onClick={(e) => handleToggleLike(e)}
     >
+      <SendEventOnClick
+        id={id}
+        event={{
+          // @ts-ignore:
+          name: "post_score",
+          params: {
+            // @ts-ignore:
+            score: quantity.value + 1,
+            level: 5,
+            character: String(productID),
+          },
+        }}
+      />
       {!selected.value
         ? <Icon id="MoodSmile" width={24} height={24} />
         : <Icon id="MoodCheck" width={24} height={24} />}
@@ -57,6 +87,7 @@ function LikeButtonIsland({ productID }: LikeButtonIslandProps) {
       >
         {quantity.value}
       </span>
+      <Toast />
     </button>
   );
 }

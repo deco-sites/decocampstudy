@@ -5,12 +5,15 @@
 import * as $$$$$$$$$0 from "./actions/sendLikesAction.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
+import * as $$$$$$$$0 from "./flags/multivariate.ts";
 import * as $$$2 from "./loaders/availableIcons.ts";
 import * as $$$3 from "./loaders/icons.ts";
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
 import * as $$$4 from "./loaders/totalLikesLoader.ts";
 import * as $$$5 from "./loaders/totalLikesProductLoader.ts";
+import * as $$$$$$$0 from "./matchers/platform.ts";
+import * as $$$$$$$1 from "./matchers/utm.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/Coupon.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarousel.tsx";
@@ -131,6 +134,13 @@ const manifest = {
     "deco-sites/decocampstudy/sections/Social/InstagramPosts.tsx": $$$$$$48,
     "deco-sites/decocampstudy/sections/Social/WhatsApp.tsx": $$$$$$49,
     "deco-sites/decocampstudy/sections/Theme/Theme.tsx": $$$$$$50,
+  },
+  "matchers": {
+    "deco-sites/decocampstudy/matchers/platform.ts": $$$$$$$0,
+    "deco-sites/decocampstudy/matchers/utm.ts": $$$$$$$1,
+  },
+  "flags": {
+    "deco-sites/decocampstudy/flags/multivariate.ts": $$$$$$$$0,
   },
   "actions": {
     "deco-sites/decocampstudy/actions/sendLikesAction.ts": $$$$$$$$$0,
