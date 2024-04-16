@@ -25,7 +25,7 @@ export default defineApp(async (_req, ctx) => {
           rel="stylesheet"
           href="https://esm.sh/react-toastify@9.1.1/dist/ReactToastify.css"
         />
-        
+
         {/* Tailwind v3 CSS file */}
         <link
           href={asset(`/styles.css?revision=${revision}`)}

@@ -6,7 +6,6 @@ import { useEffect, useId } from "preact/hooks";
 import { SendEventOnClick } from "deco-sites/decocampstudy/components/Analytics.tsx";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 
-
 export interface LikeButtonIslandProps {
   productID: string;
 }
@@ -16,7 +15,7 @@ function LikeButtonIsland({ productID }: LikeButtonIslandProps) {
   const quantity = useSignal(0);
   const id = useId();
   const Toast = ToastContainer as any;
-  
+
   useEffect(() => {
     const updateTotals = async () => {
       const totalLikes = await invoke["deco-sites/decocampstudy"].loaders
@@ -45,7 +44,7 @@ function LikeButtonIsland({ productID }: LikeButtonIslandProps) {
     const totalLikesProduct = await invoke["deco-sites/decocampstudy"].loaders
       .totalLikesProductLoader({ productID });
     quantity.value = totalLikesProduct.product;
-    toast.success("👍 Curtiu meeeeeu!", {
+    toast.success("👍 Sim, curtiu!", {
       position: "top-right",
       autoClose: 1000,
       hideProgressBar: false,

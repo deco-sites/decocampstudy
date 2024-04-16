@@ -21,7 +21,7 @@ export interface HorizontalProductSectionProps {
 const HorizontalProductSection = ({
   products,
   layout = "max-w-6xl",
-  animateImage
+  animateImage,
 }: SectionProps<typeof loader>) => {
   if (!products?.length) return null;
 

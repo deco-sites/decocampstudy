@@ -49,8 +49,8 @@ function Navbar(
               alt={logo.alt}
               width={logo.width || 100}
               height={logo.height || 13}
-              loading='lazy'
-              fetchPriority='low'
+              loading="lazy"
+              fetchPriority="low"
             />
           </a>
         )}

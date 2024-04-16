@@ -19,7 +19,7 @@ export type Props = {
    */
   platform: Platform;
   theme?: Section;
-  secretLikes: Secret
+  secretLikes: Secret;
 } & CommerceProps;
 
 export type Platform =

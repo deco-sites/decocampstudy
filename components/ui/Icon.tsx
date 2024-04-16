@@ -49,7 +49,7 @@ export type AvailableIcons =
   | "share"
   | "MoodCheck"
   | "MoodSmile"
-  | "Friends"
+  | "Friends";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**
