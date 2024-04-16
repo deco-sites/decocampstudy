@@ -2,9 +2,10 @@ import type { Product } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import { HorizontalProductCard } from "$components/product/HorizontalProductCard.tsx";
 import type { SectionProps } from "deco/types.ts";
+import { ProductCardFlagProps } from "deco-sites/decocampstudy/flags/multivariate.ts";
 
 export interface HorizontalProductSectionProps {
-  products: Product[] | null;
+  products: ProductCardFlagProps | null;
   layout:
     | "max-w-xl"
     | "max-w-2xl"

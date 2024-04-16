@@ -14,7 +14,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.words": [
-    "celsius"
+    "celsius",
+    "decocampstudy"
   ],
   "[typescriptreact]": {
     "editor.defaultFormatter": "denoland.vscode-deno"

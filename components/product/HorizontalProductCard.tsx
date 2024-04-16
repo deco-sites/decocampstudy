@@ -36,30 +36,36 @@ export const HorizontalProductCard = ({
             height={175}
             loading="lazy"
             alt={name}
-            class={clx(`max-w-[175px] max-h-[175px] ${animateImage && "hover:scale-110 duration-300"}`)}
+            class={clx(
+              `max-w-[175px] max-h-[175px] ${
+                animateImage && "hover:scale-110 duration-300"
+              }`,
+            )}
           />
         )}
       </div>
 
-      <div class="ml-2 flex flex-col">
-        <h2>{name}</h2>
-        <p class="min-h-[33px] text-normal leading-4 line-clamp-2 overflow-hidden">
-          {description}
-        </p>
-        {listPrice && (
-          <p class="line-through">
-            {formatPrice(listPrice, offers?.priceCurrency)}
+      <a href={url} alt={name}>
+        <div class="ml-2 flex flex-col">
+          <h2>{name}</h2>
+          <p class="min-h-[33px] text-normal leading-4 line-clamp-2 overflow-hidden">
+            {description}
           </p>
-        )}
-        {price && <p>{formatPrice(price, offers?.priceCurrency)}</p>}
-        {price && (
-          <AddToCartButtonVTEX
-            eventParams={eventParams}
-            productID={productID}
-            seller={seller ?? "1"}
-          />
-        )}
-      </div>
+          {listPrice && (
+            <p class="line-through">
+              {formatPrice(listPrice, offers?.priceCurrency)}
+            </p>
+          )}
+          {price && <p>{formatPrice(price, offers?.priceCurrency)}</p>}
+          {price && (
+            <AddToCartButtonVTEX
+              eventParams={eventParams}
+              productID={productID}
+              seller={seller ?? "1"}
+            />
+          )}
+        </div>
+      </a>
 
       <LikeButtonIsland productID={productID} />
     </div>

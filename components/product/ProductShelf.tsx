@@ -29,13 +29,9 @@ export interface Props {
   cardLayout?: cardLayout;
 }
 
-function ProductShelf({
-  products,
-  title,
-  description,
-  layout,
-  cardLayout,
-}: Props) {
+function ProductShelf(
+  { products, title, description, layout, cardLayout }: Props,
+) {
   const id = useId();
   const platform = usePlatform();
 
@@ -58,7 +54,7 @@ function ProductShelf({
     5: "w-1/5",
   };
   return (
-    <div class="w-full container py-8 flex flex-col gap-6 lg:py-10">
+    <div class="container w-full px-4 md:px-0 mx-auto py-8 lg:py-10">
       <Header
         title={title || ""}
         description={description || ""}
@@ -69,9 +65,9 @@ function ProductShelf({
       <div
         id={id}
         class={clx(
-          "grid",
+          "grid mt-4 sm:mt-8",
           layout?.showArrows && "grid-cols-[48px_1fr_48px]",
-          "px-0 md:px-5 container",
+          "px-0 container",
         )}
       >
         <Slider class="carousel carousel-center sm:carousel-end sm:gap-1 row-start-2 row-end-5">
@@ -120,7 +116,7 @@ function ProductShelf({
                 mapProductToAnalyticsItem({
                   index,
                   product,
-                  ...(useOffer(product.offers)),
+                  ...useOffer(product.offers),
                 })
               ),
             },
